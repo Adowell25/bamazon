@@ -55,7 +55,7 @@ function inventoryQuantity(id, orderAmount){
     connection.query('Select * From products WHERE item_id = ' + id, function (err, res){
         if(err){console.log(err)};
         if (orderAmount <= res[0].stock_quantity){
-            var totalCost = res[0].price * orderAmount;
+            var totalCost = res[0].price * orderAmount.toFixed(2);
 			console.log("Your total cost for " + orderAmount + " " +res[0].product_name + " is " + totalCost + " Thank you!");
             
             connection.query("UPDATE products SET stock_quantity = stock_quantity - " + orderAmount + " WHERE item_id = " + id);
@@ -65,6 +65,9 @@ function inventoryQuantity(id, orderAmount){
 		custOrder();
         }
 )}
+
+
+
 
 
 
