@@ -4,7 +4,9 @@ Bamazon is Amazon-like storefront with the MySQL. The app will take in orders fr
 
 Packages Installed:
 MYSQL - This is a node.js driver for mysql. It is written in JavaScript, does not require compiling, and is 100% MIT licensed.
+
 Inquirer - An interactive command-line tool that can prompt users 
+
 Table - Produces a string that represents array data in a text table.
 
 Npm, www.npmjs.com/.
